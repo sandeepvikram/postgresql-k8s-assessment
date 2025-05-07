@@ -1,0 +1,19 @@
+auth:
+  postgresPassword: myStrongPassword123  # Stored securely using Secret in real-world
+
+primary:
+  persistence:
+    enabled: true
+    size: 8Gi
+    storageClass: "standard"
+
+service:
+  type: ClusterIP
+
+resources:
+  requests:
+    memory: 256Mi
+    cpu: 250m
+  limits:
+    memory: 512Mi
+    cpu: 500m
